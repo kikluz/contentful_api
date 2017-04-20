@@ -16,9 +16,7 @@ activate :syntax # code highlighting
 # -------------------------------------------------------------------
 # activate the extension 
 # -------------------------------------------------------------------
-activate :blog do |blog|
-  # set options on blog
-end
+
 
 
 # github userpages deploy

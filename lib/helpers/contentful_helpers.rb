@@ -7,7 +7,7 @@ module ContentfulHelpers
 	end
 
 	def humanize_time(time)
-		return time.strftime('%B %C %y ')
+		return time.strftime('%B %C %y %H %p')
 	end
 end
 

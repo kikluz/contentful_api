@@ -4,6 +4,7 @@
 
 # custom
 require 'lib/extensions/custom_urls.rb'
+require 'time'
 activate :custom_urls
 
 # gems

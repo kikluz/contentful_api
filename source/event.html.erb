@@ -1,0 +1,18 @@
+---
+title: Contentful-mm | Event
+---
+
+<h1>New Events</h1>
+
+<% get_client.entries(content_type: 'show').each do |entry| %>
+	<h2><%= entry.fields[:event] %></h2>	
+	<p><%= entry.fields[:description] %></p>
+	<strong><%= humanize_time Time.parse(entry.fields[:date]) %></strong>	
+	<p>
+		<a href="https://maps.google.com?q=<%= entry.fields[:location]['lat'] %>,<%= entry.fields[:location]['lon'] %>">
+			map
+		</a>
+	</p>
+	<a href="#"><%= image_tag entry.fields[:media].fields[:file].url %></a>	
+
+<% end %>

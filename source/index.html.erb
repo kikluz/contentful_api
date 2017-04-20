@@ -1,22 +1,12 @@
 ---
 title: Contentful-MM
 ---
-<%
-require 'time'
-%>
-<h1>Demo Site</h1>
+
+<h1>Check it out New Events!</h1>
 
 <% get_client.entries(content_type: 'show').each do |entry| %>
-
-	<pre><%= entry.fields[:media].fields[:file].url %></pre> 
-
-	<h1><%= entry.fields[:event] %></h1>	
+	<h2><%= entry.fields[:event] %></h2>	
 	<p><%= entry.fields[:description] %></p>
-	<p><%= entry.fields[:location] %></p>	
-	<strong><%= humanize_time Time.parse(entry.fields[:date]) %></strong>	
-
-	<a href="https://maps.google.com?q=<%= entry.fields[:location]['lat'] %>,<%= entry.fields[:location]['lon'] %>">map</a>
-	<a href="#"><%= image_tag entry.fields[:media].fields[:file].url %></a>
+	<p><%= link_to 'Read more', '/event.html', :relative => true %></p>
 	
-
 <% end %>

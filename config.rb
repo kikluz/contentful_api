@@ -31,7 +31,7 @@ activate :syntax # code highlighting
 activate :deploy do |deploy|
    deploy.build_before = true # runs build before deploying
   deploy.deploy_method = :git
-  deploy.branch = 'master'
+  
 end
 
 # markdown settings

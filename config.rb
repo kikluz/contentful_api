@@ -29,9 +29,8 @@ activate :syntax # code highlighting
 
 # github project pages deploy
 activate :deploy do |deploy|
-   deploy.build_before = true # runs build before deploying
-  deploy.deploy_method = :git
-  
+  deploy.method = :git
+  deploy.build_before = true # default: false
 end
 
 # markdown settings
